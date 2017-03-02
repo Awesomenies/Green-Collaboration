@@ -1,0 +1,39 @@
+﻿#my-carousel .img {
+  background-position: center center;
+  background-size: cover;
+  height: calc(100vh - 50px); }
+
+.sec-about-footprint {
+  padding: 30px 130px; }
+  .sec-about-footprint p {
+    line-height: 45px; }
+
+.sec-footprint h1 {
+  font-size: 30px;
+  margin-bottom: 50px; }
+
+.sec-footprint a {
+  font-size: 28px;
+  position: absolute; }
+
+.sec-footprint .a-one {
+  top: 100px;
+  left: 20px; }
+
+.sec-footprint .a-two {
+  top: 100px;
+  right: 75px; }
+
+.sec-footprint .a-three {
+  bottom: 115px;
+  left: 50px; }
+
+.sec-footprint .a-four {
+  bottom: 115px;
+  right: 60px; }
+
+.sec-contact {
+  padding: 30px 110px; }
+  .sec-contact input {
+    width: 100%; }
+

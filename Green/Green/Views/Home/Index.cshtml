@@ -1,0 +1,174 @@
+﻿@using Microsoft.Ajax.Utilities
+@model Green.Models.ViewModels.VmHomeIndex
+<section class="row">
+    <div class="col-sm-12 hidden-xs zero">
+        <div id="my-carousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                @{ var i = 0;}
+                @foreach (var item in Model.Sliders)
+                {
+                    if (item == Model.Sliders.First())
+                    {
+                        <li data-target="#my-carousel" data-slide-to="@i" class="active"></li>
+                        i++;
+                    }
+                    else
+                    {
+                        <li data-target="#my-carousel" data-slide-to="@i"></li>
+                        i++;
+                    }
+                }
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+
+                @foreach (var item in Model.Sliders)
+                {
+
+                    if (item == Model.Sliders.First() && item.Active)
+                    {
+                        <div class="item active">
+                            <div class="img" style="background-image: url(/media/slider/@item.ImagesUrl)"></div>
+                            <div class="carousel-caption">
+                                <h3>@Model.Sliders.Count</h3>@*TODO: SKAL SKRIVES IND I DATABASE SOM TEXT*@
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>@*TODO: SKAL SKRIVES IND I DATABASE SOM TEXT*@
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="item">
+                            <div class="img" style="background-image: url(/media/slider/@item.ImagesUrl)"></div>
+                            <div class="carousel-caption">
+                                <h3>En text / Title</h3> @*TODO: SKAL SKRIVES IND I DATABASE SOM TEXT*@
+                                <p>En beskrivelse</p>@*TODO: SKAL SKRIVES IND I DATABASE SOM TEXT*@
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            <a class="left carousel-control" href="#my-carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#my-carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+@* SLIDER ENDS *@
+@* SECTION CARBON FOOTPRINT *@
+<section class="row">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <article class="text-center sec-about-footprint">
+                    <h2>
+                        Forside text @*TODO: SKAL SKRIVES IND I DATABASE SOM TEXT*@
+                    </h2><br />
+                    <p>
+                        @*TODO: SKAL SKRIVES IND I DATABASE SOM TEXT*@
+                        Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                        Placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante.
+                    </p>
+                    <p>
+                        Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                        Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+
+                    </p>
+                </article>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 text-center sec-footprint">
+                <h1>Prøv vores CO2 beregner</h1>
+                <div class="octagonWrap text-center">
+                    <div class="octagon">
+                    </div>
+                    <a class="a-one" href="#">Beregn <br />enkelte apperater</a>
+                    <a class="a-two" href="#">Beregn <br />El & Vand</a>
+                    <a class="a-three" href="#">Beregn <br /> CO2 Aftryk 3</a>
+                    <a class="a-four" href="#">Total <br />beregneren</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="row">
+    <div class="col-xs-12">
+        <div class="row">
+            <article class="col-xs-12 col-sm-6 sec-contact">
+                <h2 class="text-center">Send os en besked</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Indtast dit navn..." class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Indtast din E-mail..." class="form-control" />
+
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Indtast din besked her..." class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Send" />
+                    </div>
+                </form>
+            </article>
+            <article class="col-xs-12 col-sm-6 text-center">
+                <h2>                    @*TODO: SKAL SKRIVES IND I DATABASE SOM TEXT*@
+                    Hvem er vi
+                </h2>
+                <p>                    @*TODO: SKAL SKRIVES IND I DATABASE SOM TEXT*@
+                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                    Placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante.
+                    Fusce non varius purus aenean nec magna felis fusce vestibulum velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget.
+                </p>
+                <p>
+                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                    Placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante.
+                    Fusce non varius purus aenean nec magna felis fusce vestibulum velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+<section class="row">
+    <div class="col-xs-12">
+        <div class="banner-tips text-center">
+            <h3>Her er der et tip</h3>
+            <p> @*TODO: SKAL SKRIVE IND I DATABASE UNDER TIPS*@
+                Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="row">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="hidden-xs col-sm-6">
+                @*TODO: SKAL SKRIVE IND I DATABASE UNDER ADS*@
+                <h1>Her kommer der en reklame eller tom</h1>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <h2>Nyheder</h2>
+                <div style="height: 600px; margin-top: "></div>
+            </div>
+            @*@foreach (var n in Model.News)
+            {
+                if (n.active)
+                {
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                }
+            }*@
+        </div>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "Content/scss/_functions.css",
+    "inputFile": "Content/scss/_functions.scss"
+  },
+  {
+    "outputFile": "Content/scss/_global-design.css",
+    "inputFile": "Content/scss/_global-design.scss"
+  },
+  {
+    "outputFile": "Content/scss/_home.css",
+    "inputFile": "Content/scss/_home.scss"
+  }
+]
