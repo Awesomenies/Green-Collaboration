@@ -22,6 +22,6 @@ body {
     white-space: normal;
 }
 a {
-    text-underline: none;
+    text-decoration: none;
     color: black;
 }
