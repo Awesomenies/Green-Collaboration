@@ -17,6 +17,9 @@ namespace Green.Controllers
             VmHomeIndex vm = new VmHomeIndex();
 
             vm.Sliders = db.Sliders.ToList();
+            vm.Tips = db.Tips.ToList();
+            vm.Adses = db.Adses.ToList();
+            vm.Texts = db.Texts.ToList();
             
             return View(vm);
         }
@@ -26,6 +29,11 @@ namespace Green.Controllers
             ViewBag.Message = "Your application description page.";
 
             return View();
+        }
+        public ActionResult Blog()
+        {
+            List<Blog> a = db.Blogs.ToList();
+            return View(a);
         }
     }
 }

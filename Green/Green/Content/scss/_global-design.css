@@ -1,1 +1,6 @@
-﻿
+﻿.banner-tips .item {
+  height: 200px; }
+
+.banner-tips .carousel-control {
+  background-image: none; }
+
