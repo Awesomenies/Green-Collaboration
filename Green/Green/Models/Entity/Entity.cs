@@ -21,6 +21,13 @@ namespace Green.Models.Entity
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         public virtual DbSet<Slider> Sliders { get; set; }
+        public virtual DbSet<Tip> Tips { get; set; }
+        public virtual DbSet<Text> Texts { get; set; }
+        public virtual DbSet<TipCategori> TipCategoris { get; set; }
+        public virtual DbSet<Place> Places { get; set; }
+        public virtual DbSet<AdsCategori> AdsCategoris { get; set; }
+        public virtual DbSet<Ads> Adses { get; set; }
+
     }
 
     //public class MyEntity
