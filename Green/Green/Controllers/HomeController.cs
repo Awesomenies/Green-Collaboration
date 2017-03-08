@@ -30,10 +30,5 @@ namespace Green.Controllers
 
             return View();
         }
-        public ActionResult Blog()
-        {
-            List<Blog> a = db.Blogs.ToList();
-            return View(a);
-        }
     }
 }

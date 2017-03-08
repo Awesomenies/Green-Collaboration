@@ -6,6 +6,10 @@
   overflow: hidden;
   margin: auto; }
 
+.octagonWrap-Co2 {
+  width: 600px;
+  height: 600px; }
+
 .octagon {
   position: absolute;
   top: 0;
@@ -14,7 +18,8 @@
   left: 0;
   overflow: hidden;
   transform: rotate(45deg);
-  background-image: url(/media/home-foursquare.jpg); }
+  background-image: url(/media/home-foursquare.jpg);
+  background-position: center center; }
 
 .octagon:before {
   position: absolute;

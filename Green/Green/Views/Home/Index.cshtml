@@ -1,6 +1,6 @@
 ﻿@using Microsoft.Ajax.Utilities
 @model Green.Models.ViewModels.VmHomeIndex
-<section class="row">
+<div class="row">
     <div class="col-sm-12 hidden-xs zero">
         <div id="my-carousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -58,7 +58,7 @@
             </a>
         </div>
     </div>
-</section>
+</div>
 @* SLIDER ENDS *@
 @* SECTION CARBON FOOTPRINT *@
 <section class="row">
@@ -89,10 +89,10 @@
                 <div class="octagonWrap text-center">
                     <div class="octagon">
                     </div>
-                    <a class="a-one" href="#">Beregn <br />enkelte apperater</a>
-                    <a class="a-two" href="#">Beregn <br />El & Vand</a>
-                    <a class="a-three" href="#">Beregn <br /> CO2 Aftryk 3</a>
-                    <a class="a-four" href="#">Total <br />beregneren</a>
+                    <a class="a-one" href="/Co2/Apparat">Beregn <br />enkelte apperater</a>
+                    <a class="a-two" href="/Co2/ElVand">Beregn <br />El & Vand</a>
+                    <a class="a-three" href="/Co2/Co2">Beregn <br /> CO2 Aftryk 3</a>
+                    <a class="a-four" href="/Co2/Total">Total <br />beregneren</a>
                 </div>
             </div>
         </div>
@@ -252,15 +252,15 @@
                         {
                             if (ads == Model.Adses.First())
                             {
-                        <div class="item active">
-                            <img alt="First slide" src="http://placehold.it/1200x675&text=First+slide">
-                        </div>
+                                <div class="item active">
+                                    <img alt="First slide" src="http://placehold.it/1200x675&text=First+slide">
+                                </div>
                             }
                             else
                             {
-                        <div class="item">
-                            <img alt="Second slide" src="http://placehold.it/1200x675&text=Second+slide">
-                        </div>
+                                <div class="item">
+                                    <img alt="Second slide" src="http://placehold.it/1200x675&text=Second+slide">
+                                </div>
                             }
                         }
                     </div>
