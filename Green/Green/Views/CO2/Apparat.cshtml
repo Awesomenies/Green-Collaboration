@@ -1,0 +1,65 @@
+﻿@model Green.Models.ViewModels.VmUtilitie
+@*@foreach (var q in Model.Utilities)
+{
+    if (q.Id.Equals(Model.result))
+    {
+        
+    }
+    <p>@q.</p>
+}*@
+@{
+    if (ViewBag.hej != null)
+    {
+        foreach (var item in ViewBag.hej)
+        {
+            @item.cat
+        }
+    }
+}
+<div class="row">
+    <div class="col-xs-6 text-center">
+        <form action="/Co2/Apparat" method="post">
+            <div class="form-group">
+                <select class="" name="cat">
+                    <option class="form-control" disabled="disabled" selected="selected">Vælg et appararet fra listen</option>
+                    @foreach (var opt in Model.UtilitieCategories)
+                    {
+                        <option class="form-control" value="@opt.Id">@opt.Cat</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="brand" value="" placeholder="Skriv mærket" />
+                <input class="form-control" type="text" name="model" value="" placeholder="Skriv model" />
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="number" name="watt" value="" placeholder="Skriv hvor meget watt den bruger"/>
+            </div>
+            <input type="submit" value="Send"/>
+        </form>
+    </div>
+    <div class="col-xs-6">
+        
+    </div>
+</div>
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<img src="http://www.placehold.it/250x250" />

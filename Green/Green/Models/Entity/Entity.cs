@@ -1,3 +1,6 @@
+using Green.Models.Entity.Beregner;
+using Green.Models.User;
+
 namespace Green.Models.Entity
 {
     using System;
@@ -26,7 +29,10 @@ namespace Green.Models.Entity
         public virtual DbSet<TipCategori> TipCategoris { get; set; }
         public virtual DbSet<Place> Places { get; set; }
         public virtual DbSet<AdsCategori> AdsCategoris { get; set; }
+        public virtual DbSet<Utilitie> Utilities { get; set; }
+        public virtual DbSet<UtilitieCategory> UtilitieCategories { get; set; }
         public virtual DbSet<Ads> Adses { get; set; }
+        public virtual DbSet<UserAccount> UserAccounts { get; set; }
 
     }
 
