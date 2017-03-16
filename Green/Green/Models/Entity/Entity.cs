@@ -1,5 +1,6 @@
 using Green.Models.Entity.Beregner;
 using Green.Models.User;
+using System.Web.Mvc;
 
 namespace Green.Models.Entity
 {
@@ -33,6 +34,27 @@ namespace Green.Models.Entity
         public virtual DbSet<UtilitieCategory> UtilitieCategories { get; set; }
         public virtual DbSet<Ads> Adses { get; set; }
         public virtual DbSet<UserAccount> UserAccounts { get; set; }
+        //Blog loaded here
+        public virtual DbSet<Blog> Blogs{ get; set; }
+        public virtual DbSet<BlogText> BlogTexts { get; set; }
+        public virtual DbSet<BlogSlider> BlogSliders { get; set; }
+        public virtual DbSet<BlogComment>BlogComments { get; set; }
+        public virtual DbSet<BlogLike>BlogLikes { get; set; }
+        //News loaded here
+        public virtual DbSet<News> Newss { get; set; }
+        public virtual DbSet<NewsText> NewsTexts { get; set; }
+        public virtual DbSet<NewsSlider> NewsSliders { get; set; }
+        public virtual DbSet<NewsSliderIneternationalt> NewsSliderIneternationalts { get; set; }
+        public virtual DbSet<NewsSliderLokalt> NewsSliderLokalts { get; set; }
+        public virtual DbSet<NewsSliderNationalt> NewsSliderNationalts { get; set; }
+        public virtual DbSet<NewsComment> NewsComments { get; set; }
+        public virtual DbSet<NewsLike> NewsLikes { get; set; }
+        //Contact loaded here
+        public virtual DbSet<Contact> Contacts { get; set; }
+        public virtual DbSet<ContactText> ContactTexts { get; set; }
+        public virtual DbSet<ContactSlider> ContactSliders { get; set; }
+        public virtual DbSet<NewsLetter> NewsLetters { get; set; }
+        //public virtual DbSet<> MyProperty { get; set; }
 
     }
 

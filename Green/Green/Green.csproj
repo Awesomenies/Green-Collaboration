@@ -169,21 +169,27 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\Co2Controller.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703011401169_InitialCreate.cs" />
-    <Compile Include="Migrations\201703011401169_InitialCreate.Designer.cs">
-      <DependentUpon>201703011401169_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201703160812398_init.cs" />
+    <Compile Include="Migrations\201703160812398_init.Designer.cs">
+      <DependentUpon>201703160812398_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Ads.cs" />
     <Compile Include="Models\Entity\AdsCategori.cs" />
     <Compile Include="Models\Entity\Beregner\Utilitie.cs" />
     <Compile Include="Models\Entity\Beregner\UtilitieCategory.cs" />
+    <Compile Include="Models\Entity\Blog.cs" />
+    <Compile Include="Models\Entity\Contact.cs" />
     <Compile Include="Models\Entity\Entity.cs" />
+    <Compile Include="Models\Entity\News.cs" />
     <Compile Include="Models\Entity\Place.cs" />
     <Compile Include="Models\Entity\Slider.cs" />
     <Compile Include="Models\Entity\Text.cs" />
@@ -191,11 +197,18 @@
     <Compile Include="Models\Entity\TipCategori.cs" />
     <Compile Include="Models\Handlers\Apparet.cs" />
     <Compile Include="Models\User\UserAccount.cs" />
+    <Compile Include="Models\ViewModels\VmBlog.cs" />
+    <Compile Include="Models\ViewModels\VmContact.cs" />
     <Compile Include="Models\ViewModels\VmHomeIndex.cs" />
+    <Compile Include="Models\ViewModels\VmNews.cs" />
     <Compile Include="Models\ViewModels\VmUtilitie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-Green-20170228024829.mdf" />
+    <Content Include="App_Data\aspnet-Green-20170228024829_log.ldf">
+      <DependentUpon>aspnet-Green-20170228024829.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -274,9 +287,11 @@
     <Content Include="Views\CO2\ElVand.cshtml" />
     <Content Include="Views\CO2\Co2.cshtml" />
     <Content Include="Views\CO2\Total.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="media\slider\" />
     <Folder Include="Views\Account\" />
   </ItemGroup>
@@ -288,8 +303,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703011401169_InitialCreate.resx">
-      <DependentUpon>201703011401169_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703160812398_init.resx">
+      <DependentUpon>201703160812398_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
